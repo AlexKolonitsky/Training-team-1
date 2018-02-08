@@ -45,12 +45,12 @@ button {
 }
 
 .wrp:hover::after {
-    content: attr(data-title); /* Выводим текст */
+    content: attr(data-title);
     position: absolute;
     display: block;
-    z-index: 1; /* Отображаем подсказку поверх других элементов */
-    background: #cccccc; /* Полупрозрачный цвет фона */
+    z-index: 1;
+    background: #cccccc;
     font-size: 14px;
-    padding: 5px 10px; /* Поля */
-    border: 1px solid #cccccc; /* Параметры рамки */
+    padding: 5px 10px;
+    border: 1px solid #cccccc;
 }
