@@ -36,6 +36,7 @@ h1 {
     text-align: center;
     color: #ccc;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .hint:hover::after {
@@ -47,4 +48,8 @@ h1 {
     padding: 5px 10px;
     border: 1px solid #ccc;
 }
-
+a{
+    display: block;
+   text-align: right;
+    color: #ccc;
+}
