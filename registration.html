@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/registrationStyle.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Padauk" rel="stylesheet">
 </head>
 <body>
-$END$
+<header>
+    <h1>create profile</h1>
+</header>
+<main>
+    <div class="photo">
+        <div class="photoImg"></div>
+        <div class="photoUpload">
+            <form action="" enctype="multipart/form-data">
+                <input type="file" name="photo" multiple accept="image/jpeg,image/png,image/jpg,image/gif"/>
+            </form>
+            <div class="buttonUpload">Upload your <br> photo</div>
+        </div>
+    </div>
+    <div class="dataForm">
+        <form action="" id="dataForm">
+            <input type="text" name="name1" required placeholder="Name">
+            <br>
+            <div class="hint">
+                Enter your name
+            </div>
+            <hr>
+            <input type="text" name="surname" required placeholder="Surname">
+            <br>
+            <div class="hint">
+                Enter your surname
+            </div>
+            <hr>
+            <input type="tel" name="phone" required placeholder="Phone" pattern="375[0-9]{9}">
+            <br>
+            <div class="hint">
+                Enter your phone in format 375XXXXXXXXX
+            </div>
+            <hr>
+        </form>
+    </div>
+    <button form="dataForm" id="create" type="button">create account</button>
+</main>
+<script src="js/registration.js"></script>
 </body>
 </html>
