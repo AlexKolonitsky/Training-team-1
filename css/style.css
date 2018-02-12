@@ -20,6 +20,7 @@ form {
 
 form h2 {
   color: #454545;
+  text-transform: uppercase;
 }
 
 form input {
@@ -34,7 +35,6 @@ form input {
 }
 
 form input:focus{
-
   box-shadow: 0px 0px 2vw 0px #7bc1f4;
 }
 
@@ -43,15 +43,107 @@ form input::placeholder {
   transition: color 0.3s ease;
 }
 
-form button {
+form button, form .upload-image-label{
   padding: 1vw;
   border: 0;
   background-color: #e9e9e9;
   color: #454545;
   text-transform: uppercase;
+  cursor: pointer;
+  margin: 1vw;
+}
+
+form .upload-image-label{
+  display: inline-block;
+  font-size: 1em;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+input[type="file"] {
+  display: none;
 }
 
 .wrongValue::placeholder {
   color: #ff0000;
 }
+
+
+.profile-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image-info, .resume-info{
+  width: 15vw;
+}
+
+.image-info .image-container{
+  width: 7vw;
+  height: 7vw;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #ff0000;
+
+  background: url('../res/avatar.png');
+  background-position: center center;
+  background-size: cover;
+}
+
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
