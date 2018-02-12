@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TASK 1 | MIFORT</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+<body>
+<form action="javascript:return false">
+  <h2>Create Profile</h2>
+
+  <div class="profile-info">
+    <div class="image-info">
+      <div class="image-container"></div>
+      <label class="upload-image-label"> Upload
+        <input type="file" class="inputfile" onchange="previewFile()">
+      </label>
+    </div>
+    <div class="resume-info">
+      <input type="text" placeholder="First Name" title="Enter the first name">
+      <input type="text" placeholder="Last Name" title="Enter the last name">
+      <input type="tel" id="phoneNumber" placeholder="Phone number" title="Enter your phone number">
+    </div>
+    </div>
+  </div>
+
+  <button id="confirm">Sign Up</button>
+</form>
+</body>
+</html>
