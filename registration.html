@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link href="css/registrationStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="assets/css/registrationStyle.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Padauk" rel="stylesheet">
 </head>
 <body>
@@ -23,28 +23,21 @@
     </div>
     <div class="dataForm">
         <form action="" id="dataForm">
-            <input type="text" name="name1" required placeholder="Name">
-            <br>
-            <div class="hint">
-                Enter your name
+            <div class="hint" data-title=" Enter your name">
+                <input type="text" name="name1" class="wr" required placeholder="Name">
+                <hr>
             </div>
-            <hr>
-            <input type="text" name="surname" required placeholder="Surname">
-            <br>
-            <div class="hint">
-                Enter your surname
+            <div class="hint" data-title=" Enter your surname">
+                <input type="text" name="surname" class="surname" required placeholder="Surname">
+                <hr>
             </div>
-            <hr>
-            <input type="tel" name="phone" required placeholder="Phone" pattern="375[0-9]{9}">
-            <br>
-            <div class="hint">
-                Enter your phone in format 375XXXXXXXXX
+            <div class="hint" data-title=" Enter your phone in format 375XXXXXXXXX">
+                <input type="tel" name="phone" class="phone" required placeholder="Phone" pattern="375[0-9]{9}">
+                <hr>
             </div>
-            <hr>
         </form>
     </div>
-    <button form="dataForm" id="create" type="button">create account</button>
+    <button form="dataForm" id="create">create account</button>
 </main>
-<script src="js/registration.js"></script>
 </body>
 </html>
