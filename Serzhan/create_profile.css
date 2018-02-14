@@ -1,0 +1,49 @@
+.registration_form {
+    width: 700px;
+    height: 500px;
+}
+
+.user_info {
+    display: flex;
+}
+
+.user_info .photo {
+    width: 40%;
+}
+
+.user_info .photo .user_photo {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 90px;
+    border: 1px solid grey;
+}
+
+.user_info .personal_data {
+    float: right;
+    line-height: 40px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.user_info .footer {
+    float: bottom;
+}
+
+.inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.inputfile + label {
+    font-size: 1.35em;
+    font-weight: 100;
+    color: #989898;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    margin: 25px;
+}
+
