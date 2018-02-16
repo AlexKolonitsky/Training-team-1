@@ -29,7 +29,6 @@ body {
 .information-bar {
   flex-basis: 80%;
   height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -113,7 +112,7 @@ body {
   padding-top: 9px;
 }
 
-.filter-selection {
+.filter-selection, .selected-options {
   margin-left: 15px;
   padding: 0 46px 0 5px;
   border: 2px solid #c3c3c3;
@@ -121,10 +120,7 @@ body {
 }
 
 .selected-options {
-  margin-left: 15px;
   padding: 6px 54px 0 9px;
-  border: 2px solid #c3c3c3;
-  border-radius: 15px;
   position: relative;
 }
 
