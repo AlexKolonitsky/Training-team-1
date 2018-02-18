@@ -1,50 +1,52 @@
-$(document).ready(function () {
+window.onload = function () {
 
-
-  $('#confirm').click(function () {
-    $('input').each(function () {
-      if (!$(this).val()) {
-        //alert('Fill field '+$(this).attr('placeholder'));
-        $(this).addClass('wrongValue');
+  document.getElementById('confirm').onclick = function () {
+    var inputs = document.getElementsByTagName('input');
+    for (var index = 0; index < inputs.length; ++index) {
+      if (!inputs[index].value) {
+        inputs[index].classList.add('wrongValue');
       }
-    })
-
-
-    var pattern = /[0-9\-\(\)\s]{9}/
-    if (!pattern.test($('#phoneNumber').val())) {
-      $('#phoneNumber').val("");
-      $('#phoneNumber').addClass('wrongValue');
     }
-  });
 
-  $('#signUp').click(function () {
+    var pattern = /[0-9\-\(\)\s]{9}/;
+    var phoneInput = document.getElementsByTagName('phoneNumber');
+    if (!pattern.test(phoneInput.value)) {
+      phoneInput.value = "";
+      phoneInput.classList.add('wrongValue');
+    }
+  };
+
+  document.getElementById('signUp').onclick = function () {
     window.location.replace("register.html");
-  });
+  };
 
-  $('input').focus(function () {
-    $(this).removeClass('wrongValue');
-  })
+  var inputs = document.getElementsByTagName('input');
+  for (var index = 0; index < inputs.length; ++index) {
+    inputs[index].onfocus = function () {
+      this.classList.remove('wrongValue');
+    }
+  }
 
-})
+
+};
 
 
-function previewFile(){
-  var preview = document.querySelector('img'); //selects the query named img
-  var file    = document.querySelector('input[type=file]').files[0]; //sames as here
-  var reader  = new FileReader();
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file = document.querySelector('input[type=file]').files[0];
+  var reader = new FileReader();
 
   reader.onloadend = function () {
-    $('.image-container').css('background-image', 'url(' + reader.result + ')');
+    document.getElementById('image-container').style.backgroundImage = 'url(' + reader.result + ')';
   }
 
   if (file) {
-    reader.readAsDataURL(file); //reads the data as a URL
+    reader.readAsDataURL(file);
   } else {
     preview.src = "";
   }
-
-
 }
+
 
 
 
