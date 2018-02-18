@@ -85,14 +85,9 @@ input[type="file"] {
   margin: auto;
   border-radius: 50%;
   background-color: #ff0000;
-
-  background: url('../res/avatar.png');
+  background: url('../images/avatar.png');
   background-position: center center;
   background-size: cover;
-}
-
-{
-
 }
 
 

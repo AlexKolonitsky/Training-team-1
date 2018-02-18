@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
 
   $('#signUp').click(function () {
-    window.location.replace("signup.html");
+    window.location.replace("register.html");
   });
 
   $('input').focus(function () {
