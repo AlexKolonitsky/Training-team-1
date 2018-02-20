@@ -1,17 +1,17 @@
-.registration_form {
+.registration-form {
     width: 700px;
     height: 500px;
 }
 
-.user_info {
+.user-info {
     display: flex;
 }
 
-.user_info .photo {
+.user-info .photo {
     width: 40%;
 }
 
-.user_info .photo .user_photo {
+.user-info .photo .user-photo {
     width: 180px;
     height: 180px;
     overflow: hidden;
@@ -19,14 +19,14 @@
     border: 1px solid grey;
 }
 
-.user_info .personal_data {
+.user-info .personal-data {
     float: right;
     line-height: 40px;
     font-size: 20px;
     width: 60%;
 }
 
-.user_info .footer {
+.user-info .footer {
     float: bottom;
 }
 
