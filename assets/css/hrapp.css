@@ -12,6 +12,7 @@ html, body {
 }
 
 .right-column {
+    position: relative;
     float: right;
     min-height: 100%;
     width: 88%;
@@ -192,14 +193,14 @@ td {
 }
 
 .create {
-    position: relative;
-    background: #dcdcdc;
+    position: absolute;
+    background: #d5d5d5;
     height: 60px;
     border: none;
     border-radius: 50%;
     width: 60px;
-    top: -102px;
-    left: 1272px;
+    top: 651px;
+    left: 88%;
     font-size: 40px;
     color: #a0a09f;
     box-shadow: 0 10px 20px #d5d5d5;
