@@ -80,6 +80,8 @@ input[type="file"] {
 .image-info #image-container {
   width: 7vw;
   height: 7vw;
+  min-width: 100px;
+  min-height: 100px;
   margin: auto;
   border-radius: 50%;
   background-color: #ff0000;
@@ -87,56 +89,3 @@ input[type="file"] {
   background-position: center center;
   background-size: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
