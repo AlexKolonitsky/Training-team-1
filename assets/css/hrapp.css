@@ -39,7 +39,7 @@ h1 {
     color: #666;
 }
 
-.elementOfList {
+.element-of-list {
     height: 45px;
     padding-top: 20px;
 }
@@ -48,7 +48,7 @@ h1 {
     background-color: #dcdcdc;
 }
 
-.elementOfList a {
+.element-of-list a {
     text-decoration: none;
     color: #6c6c6c;
     font-size: 17px;
@@ -58,14 +58,14 @@ h1 {
 
 }
 
-.findRow {
+.find-row {
     background: none;
     border: none;
     width: 200px;
     height: 15px;
 }
 
-.findRow::placeholder {
+.find-row::placeholder {
     color: #bababa;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
@@ -106,7 +106,7 @@ h1 {
     font-weight: bold;
 }
 
-.filterBorder h2 {
+.filter-border h2 {
     display: block;
     margin-top: 25px;
     margin-left: 30px;
@@ -125,7 +125,7 @@ select {
     border-radius: 10px;
 }
 
-.filterBorder input {
+.filter-border input {
     margin-left: 20px;
     border: 2px #e8e8e8 solid;
     border-radius: 10px;
@@ -172,7 +172,7 @@ td {
     padding-top: 50px;
 }
 
-#pageselect {
+#page-select {
     background: none;
     color: #bababa;
     font-family: 'Roboto', sans-serif;
@@ -192,14 +192,14 @@ td {
 }
 
 .create {
-    position: absolute;
+    position: relative;
     background: #dcdcdc;
     height: 60px;
     border: none;
     border-radius: 50%;
     width: 60px;
-    top: 652px;
-    left: 1492px;
+    top: -102px;
+    left: 1272px;
     font-size: 40px;
     color: #a0a09f;
     box-shadow: 0 10px 20px #d5d5d5;
