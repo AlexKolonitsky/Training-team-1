@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Authorization</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link href="assets/css/indexStyle.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Padauk" rel="stylesheet">
+    <title>Login form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<a href="registration.html">Registration</a>
-<div class="mainContainer">
-    <form action="">
-        <h1>hr app</h1>
-        <div class="hint" data-title="Enter your email in format 123@123.com">
-            <input type="email" required placeholder="email" name="email">
-        </div>
-        <div class="hint" data-title="Enter your login">
-            <input type="text" required placeholder="login" name="login">
-        </div>
-        <div class="hint" data-title="Enter your password">
-            <input type="password" required placeholder="password" name="password">
-        </div>
-        <button>log in</button>
+<div class="login-form">
+    <h1 class="login-form-title">Hr app</h1>
+    <form action="Register form.html">
+        <input class="input-login-field" type="text" placeholder="Login" title="Login" required>
+        <input class="input-login-field" type="password" placeholder="Password" title="Password" required>
+        <input class="input-login-field" type="email" placeholder="Email" title="Email" required>
+        <input class="submit-button" type="submit" value="Sign in">
     </form>
 </div>
 </body>
