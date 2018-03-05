@@ -2,43 +2,43 @@
 
 html {
   background-color: #e9e9e9;
+
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  overflow-y: hidden;
-}
-
-.navigation-bar {
-  flex-basis: 20%;
-  min-width: 220px;
-  height: 100vh;
-  background-color: #e9e9e9;
-  box-shadow: 9px 0 9px -4px #dbdbdb;
-  z-index: 1;
-  overflow-y: auto;
+  /*height: 100vh;*/
+  /*  height: 100vh;*/
 }
 
 .global-work-page-wrapper {
-  display: flex;
-  overflow: hidden;
-  height: 100vh;
+  overflow: auto;
+  /*  height: 100%;*/
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .information-bar {
-  flex-basis: 80%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
   overflow-y: auto;
 }
 
-.filter-section {
-  display: flex;
-  min-width: 700px;
-  min-height: 33px;
-  margin: 0 0 30px 40px;
+.navigation-bar {
+  height: 100%;
+  background-color: #e9e9e9;
+  /*  overflow-y: auto;*/
+}
+
+.navigation-bar:after {
+  box-shadow: 9px 0 9px -4px #dbdbdb;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .navigation-bar-title {
@@ -51,6 +51,7 @@ body {
 
 .navigation-bar-section {
   padding: 25px 0 20px 30px;
+  /*min-width: 218px;*/
 }
 
 .navigation-bar-section-selected {
@@ -58,25 +59,13 @@ body {
 }
 
 .information-bar-search {
-  display: flex;
-  position: relative;
-  min-width: 700px;
-  min-height: 20px;
+  /*min-width: 735px;*/
   background-color: #e9e9e9;
   padding: 20px 0 20px 50px;
 }
 
-.search-input {
-  display: block;
-  border: none;
-  background-color: #e9e9e9;
-  width: 400px;
-  margin-left: 15px;
-  padding-left: 2px;
-}
-
 .search-icon, .notification-button, .logout-button {
-  display: block;
+  display: inline-block;
   background: url(../img/work-page-sprite.png) no-repeat;
   background-size: cover;
   width: 21px;
@@ -88,10 +77,22 @@ body {
   background-position: -42px 0;
 }
 
+.search-input {
+  display: inline-block;
+  border: none;
+  background-color: #e9e9e9;
+  width: 400px;
+  margin-left: 10px;
+  padding-left: 2px;
+  position: absolute;
+  bottom: 4px;
+}
+
 .notification-button {
   position: absolute;
-  right: 90px;
+  right: 60px;
   background-position: -21px 0;
+  margin-right: 35px;
 }
 
 .logout-button {
@@ -107,34 +108,18 @@ body {
   font-size: 1.3em;
 }
 
-.filter-by {
-  padding-top: 9px;
-}
-
-.filter-selection, .selected-options {
-  margin-left: 15px;
-  padding: 0 46px 0 5px;
-  border: 2px solid #c3c3c3;
-  border-radius: 15px;
-}
-
-.selected-options {
-  padding: 6px 54px 0 9px;
-  position: relative;
-}
-
-.unselect-button {
-  position: absolute;
-  top: 0;
-  right: 4px;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
 .information-table {
   width: 100%;
-  min-width: 750px;
+  /*  min-width: 735px;*/
   border-collapse: collapse;
+}
+
+.information-table-search input {
+  width: 120px;
+}
+
+.no-result {
+  padding-left: 40px;
 }
 
 th {
@@ -187,7 +172,7 @@ td {
   background-color: #ddd;
   border: none;
   border-radius: 50%;
-  padding: 14px 22px;
+  padding: 7px 20px;
   font-size: 30px;
   color: #999;
   outline: none;
