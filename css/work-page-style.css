@@ -2,17 +2,10 @@
 
 html {
   background-color: #e9e9e9;
-
-}
-
-body {
-  /*height: 100vh;*/
-  /*  height: 100vh;*/
 }
 
 .global-work-page-wrapper {
   overflow: auto;
-  /*  height: 100%;*/
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
@@ -26,7 +19,6 @@ body {
 .navigation-bar {
   height: 100%;
   background-color: #e9e9e9;
-  /*  overflow-y: auto;*/
 }
 
 .navigation-bar:after {
@@ -51,7 +43,6 @@ body {
 
 .navigation-bar-section {
   padding: 25px 0 20px 30px;
-  /*min-width: 218px;*/
 }
 
 .navigation-bar-section-selected {
@@ -59,7 +50,6 @@ body {
 }
 
 .information-bar-search {
-  /*min-width: 735px;*/
   background-color: #e9e9e9;
   padding: 20px 0 20px 50px;
 }
@@ -110,7 +100,6 @@ body {
 
 .information-table {
   width: 100%;
-  /*  min-width: 735px;*/
   border-collapse: collapse;
 }
 

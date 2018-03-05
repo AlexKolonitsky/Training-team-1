@@ -10,14 +10,6 @@ $(document).ready(function () {
 
     });
 
-    // 1. vacs.length вставить это число в .total-count $('dsfasdf').text(324)
-    // (i) 2. html selector element read everything about it. to GOOGLE: How to get the selected value with jQuery
-    // 3. insert value of selector into .last-v span
-
-    // (i) learn DOM events click/change catch events with jQuery. to GOGGLE: Selector value changed event
-    // (i) Functions. how to use it. what is this? learn.javascript.ru. Advanced: Write function that will be call 3rd step
-    // 4. Add onclick event listeners on .switch button back/forward. function () { console.log("Hello!")}
-
     drawTable(resp.vacancies)
     // Generate table
   }).catch(function (error) {
