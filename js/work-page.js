@@ -1,25 +1,15 @@
 $(document).ready(function () {
     var vacs = [];
+    var page = 0;
 
-    $.getJSON("/Training-team-1/static-data/test.json").then(function (resp) {
+    $.getJSON("static-data/test.json").then(function (resp) {
 
         vacs = resp.vacancies;
-$(".total-count").text(157);
-        $(".select-rows-per-page").change(function(){
-             var selectedPage = $(".select-rows-per-page option:selected");
+        var itemsPerPage = getCountItemsPerPage();
+        $(".total-count").text(" of " + vacs.length);
 
-        });
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
 
-        // 1. vacs.length вставить это число в .total-count $('dsfasdf').text(324)
-        // (i) 2. html selector element read everything about it. to GOOGLE: How to get the selected value with jQuery
-        // 3. insert value of selector into .last-v span
-
-        // (i) learn DOM events click/change catch events with jQuery. to GOGGLE: Selector value changed event
-        // (i) Functions. how to use it. what is this? learn.javascript.ru. Advanced: Write function that will be call 3rd step
-        // 4. Add onclick event listeners on .switch button back/forward. function () { console.log("Hello!")}
-
-        drawTable(resp.vacancies)
-        // Generate table
     }).catch(function (error) {
         console.log(error)
     });
@@ -27,7 +17,6 @@ $(".total-count").text(157);
     function drawTable(vacancies) {
         var $tableBody = $("#candidates tbody");
         $tableBody.empty();
-
         $(".no-result").toggle(vacancies.length === 0);
 
         $.each(vacancies, function (key, vacancy) {
@@ -39,54 +28,62 @@ $(".total-count").text(157);
             });
             $tableBody.append($row);
         });
-    }
 
-    function filterByLastName(lastName) {
+        updatePagination()
+    }
+    function getVacationsByPage(vacs, count) {
+        return vacs.slice(count*page, count*page + count)
+    }
+    function filterByLastName(list, lastName) {
         var lastNameInLowerCase = lastName.toLowerCase();
-        return vacs.filter(function (v) {
+        return list.filter(function (v) {
             return (v.last_name.toLowerCase()).startsWith(lastNameInLowerCase)
         });
-
     }
 
-    function filterByName(name) {
+    function filterByName(list, name) {
         var nameInLowerCase = name.toLowerCase();
-        return vacs.filter(function (v) {
+        return list.filter(function (v) {
             return (v.name.toLowerCase()).startsWith(nameInLowerCase)
         });
     }
 
-    function filterByPhone(phoneNumber) {
-        var result = vacs.filter(function (v) {
+    function filterByPhone(list, phoneNumber) {
+        var result = list.filter(function (v) {
             return v.phone_number.includes(phoneNumber)
         });
-
         return result;
     }
 
-    function filterByPosition(position) {
+    function filterByPosition(list, position) {
         var positionInLowerCase = position.toLowerCase();
-        return vacs.filter(function (v) {
+        return list.filter(function (v) {
             return (v.position.toLowerCase()).startsWith(positionInLowerCase)
         });
     }
 
-    // listen keyup event on name input
-    $("#phone-filter").on("keyup", function (event) {
-        drawTable(filterByPhone($(this).val()));
 
+    $(".table-filter").on("keyup", function (event) {
+        var result = vacs;
+        result = filterByLastName(result, $("#last-name-filter").val());
+        result = filterByName(result, $("#name-filter").val());
+        result = filterByPhone(result, $("#phone-filter").val());
+        result = filterByPosition(result, $("#position-filter").val());
+
+        drawTable(result)
     });
 
-    $("#last-name-filter").on("keyup", function (event) {
-        drawTable(filterByLastName($(this).val()));
+    function getCountItemsPerPage () {
+        return parseInt($(".select-rows-per-page option:selected").val());
+    }
 
-    });
-    $("#name-filter").on("keyup", function (event) {
-        drawTable(filterByName($(this).val()));
-    });
-    $("#position-filter").on("keyup", function (event) {
-        drawTable(filterByPosition($(this).val()));
-    });
+    function updatePagination () {
+
+        var itemsPerPage = getCountItemsPerPage()
+
+        $(".first-v").text(itemsPerPage * page);
+        $(".last-v").text(itemsPerPage * page + itemsPerPage);
+    }
 
     $("#filter-candidates").on("keyup", function () {
         var value = $(this).val().toLowerCase();
@@ -94,7 +91,6 @@ $(".total-count").text(157);
         $("#search-bar-filter tr").each(function () {
             var isVacMatch = $(this).text().toLowerCase().indexOf(value) > -1;
             $(this).toggle(isVacMatch);
-
             if (isVacMatch) {
                 showNoResultMessage = false;
             }
@@ -103,7 +99,25 @@ $(".total-count").text(157);
         $(".no-result").toggle(showNoResultMessage);
     });
 
-});
+    $("select.select-rows-per-page").change(function(){
+        page = 0
+        var itemsPerPage = getCountItemsPerPage()
+        $(".last-v").text(itemsPerPage);
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
+    });
 
+    $(".page-switching-button-back").on("click", function () {
+        page = (page > 0)? page - 1: 0;
+
+        drawTable(getVacationsByPage(vacs, getCountItemsPerPage()));
+    });
+    $(".page-switching-button-forward").on("click", function () {
+        var itemsPerPage = getCountItemsPerPage()
+
+        page = (vacs.length < itemsPerPage * (page + 1))? 0: page + 1
+
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
+    });
+});
 
 
