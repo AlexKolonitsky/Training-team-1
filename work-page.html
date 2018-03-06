@@ -1,163 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>work page</title>
-    <link rel="stylesheet" type="text/css" href="css/work-page-style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Work page</title>
+  <link rel="stylesheet" href="css/work-page-style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-<div id="navigation">
-    <div class="navigation-title">
-        HR APP
+<div class="global-work-page-wrapper">
+  <div class="row no-gutters">
+    <div class="col-12 col-lg-2">
+      <div class="navigation-bar">
+        <div class="row no-gutters">
+          <div class="col">
+            <h1 class="navigation-bar-title">Hr app</h1>
+            <div class="navigation-bar-section">Interview</div>
+            <div class="navigation-bar-section navigation-bar-section-selected">Vacancies</div>
+            <div class="navigation-bar-section">Candidates</div>
+            <div class="navigation-bar-section">Management</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="navigation-item">Interview</div>
-    <div class="navigation-item navigation_item-selected">Vacancies</div>
-    <div class="navigation-item">Candidates</div>
-    <div class="navigation-item">Management</div>
-</div>
-<div id="top-navigation">
-    <i class="material-icons">&#xE8B6;</i>
-    <input type="text" name="search" placeholder="Search for vacancies, candidates..." class="search-input">
-    <div class="right-icons">
-        <i class="material-icons">&#xE7F4;</i>
-        <i class="material-icons">&#xE879;</i>
+    <div class="col-12 col-lg-10">
+      <div class="information-bar">
+        <div class="information-bar-search">
+          <div class="row no-gutters">
+            <div class="col-10">
+              <div class="search-icon"></div>
+              <input class="search-input" type="text" placeholder="Search for vacancies, candidates">
+            </div>
+            <div class="col-2">
+              <a href="#" class="notification-button"></a>
+              <a href="#" class="logout-button"></a>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12">
+            <h2 class="information-bar-title">Vacancies</h2>
+            <table class="information-table">
+              <thead id="information-thead">
+              <tr class="information-table-header">
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone number</th>
+                <th>Position</th>
+              </tr>
+              <tr class="information-table-search">
+                <th>
+                  <input type="text" id="name-filter">
+                </th>
+                <th>
+                  <input type="text" id="last-name-filter">
+                </th>
+                <th>
+                  <input type="text" id="phone-filter">
+                </th>
+                <th>
+                  <input type="text" id="position-filter">
+                </th>
+              </tr>
+              </thead>
+              <tbody id="search-bar-filter">
+              </tbody>
+            </table>
+            <div class="no-result">No Result Found</div>
+          </div>
+        </div>
+        <div class="view-filter-wrapper">
+          <span class="rows-per-page">Rows per page</span>
+          <select class="view-filter-selection">
+            <option class="view-filter-selection-option">10</option>
+            <option class="view-filter-selection-option">20</option>
+            <option class="view-filter-selection-option">50</option>
+          </select>
+          <span class="number-of-element-per-page">1-10 of 100</span>
+          <a class="page-switching-button" href="#"><</a>
+          <a class="page-switching-button" href="#">></a>
+        </div>
+        <button class="global-add-button">+</button>
+      </div>
     </div>
+  </div>
 </div>
-<div id="page">
-    <div class="page-padding">
-        <h2>Vacancies</h2>
-        <h4 class="header-filter">Filter by </h4>
-        <select class="select-box">
-            <option>Section 1</option>
-            <option>Section 2</option>
-            <option>Section 3</option>
-        </select>
-        <select class="select-box" disabled="disabled">
-            <option>Section 1</option>
-        </select>
-        <select class="select-box" disabled="disabled">
-            <option>Section 2</option>
-        </select>
-    </div>
-    <table>
-        <tr>
-            <th>
-                simple text 1
-            </th>
-            <th>
-                simple text 2
-            </th>
-            <th>
-                simple text 3
-            </th>
-            <th>
-                simple text 4
-            </th>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java developer
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                simple text
-            </td>
-            <td>
-                View Candidates
-            </td>
-        </tr>
-    </table>
-    <div class="rows-margin">
-        <p class="rows-paragraph">
-            Rows per page
-            <select class="select-rows-per-page">
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-            </select>
-            1 - 10 of 100
-        </p>
-        <p class="left-right-button">
-            <i class="material-icons">&#xE314;</i>
-            <i class="material-icons">&#xE315;</i>
-        </p>
-    </div>
-</div>
-<div id="add-button">
-    <i class="material-icons">add</i>
-</div>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="js/work-page.js"></script>
 </body>
 </html>
