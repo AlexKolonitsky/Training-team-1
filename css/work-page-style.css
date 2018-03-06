@@ -142,10 +142,12 @@ td {
 
 .number-of-element-per-page {
   letter-spacing: 0;
-  margin-right: 30px;
+}
+.total-count{
+  margin-right: 20px;
 }
 
-.page-switching-button {
+.page-switching-button-back, .page-switching-button-forward {
   display: inline-block;
   text-decoration: none;
   font-size: 1.7em;
@@ -153,7 +155,9 @@ td {
   margin-right: 30px;
   color: #848484;
 }
-
+.page-switching-button-left{
+  padding-left: 30px;
+}
 .global-add-button {
   position: fixed;
   right: 5%;
