@@ -1,101 +1,126 @@
 $(document).ready(function () {
-  var vacs = [];
+    var vacs = [];
+    var page = 0;
 
-  $.getJSON("/Shake/static-data/test.json").then(function (resp) {
+    $.getJSON("/Training-team-1/static-data/test.json").then(function (resp) {
 
-    vacs = resp.vacancies;
-    $(".total-count").text(157);
-    $(".select-rows-per-page").change(function () {
-      var selectedPage = $(".select-rows-per-page option:selected");
+        vacs = resp.vacancies;
+        var itemsPerPage = getCountItemsPerPage();
+        $(".total-count").text(" of " + vacs.length);
 
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
+
+    }).catch(function (error) {
+        console.log(error)
     });
 
-    drawTable(resp.vacancies)
-    // Generate table
-  }).catch(function (error) {
-    console.log(error)
-  });
+    function drawTable(vacancies) {
+        var $tableBody = $(".information-table tbody");
+        $tableBody.empty();
+        $(".no-result").toggle(vacancies.length === 0);
 
-  function drawTable(vacancies) {
-    var $tableBody = $(".information-table tbody");
-    $tableBody.empty();
+        $.each(vacancies, function (key, vacancy) {
+            var $row = $("<tr />");
+            $.each(Object.keys(vacancy), function (k, vk) {
+                if (vk !== "id") {
+                    $row.append($("<td>").text(vacancy[vk]));
+                }
+            });
+            $tableBody.append($row);
+        });
 
-    $(".no-result").toggle(vacancies.length === 0);
+        updatePagination()
+    }
+    function getVacationsByPage(vacs, count) {
+        return vacs.slice(count*page, count*page + count)
+    }
+    function filterByLastName(list, lastName) {
+        var lastNameInLowerCase = lastName.toLowerCase();
+        return list.filter(function (v) {
+            return (v.last_name.toLowerCase()).startsWith(lastNameInLowerCase)
+        });
+    }
 
-    $.each(vacancies, function (key, vacancy) {
-      var $row = $("<tr />");
-      $.each(Object.keys(vacancy), function (k, vk) {
-        if (vk !== "id") {
-          $row.append($("<td>").text(vacancy[vk]));
-        }
-      });
-      $tableBody.append($row);
-    });
-  }
+    function filterByName(list, name) {
+        var nameInLowerCase = name.toLowerCase();
+        return list.filter(function (v) {
+            return (v.name.toLowerCase()).startsWith(nameInLowerCase)
+        });
+    }
 
-  function filterByLastName(lastName) {
-    var lastNameInLowerCase = lastName.toLowerCase();
-    return vacs.filter(function (v) {
-      return (v.last_name.toLowerCase()).startsWith(lastNameInLowerCase)
-    });
+    function filterByPhone(list, phoneNumber) {
+        var result = list.filter(function (v) {
+            return v.phone_number.includes(phoneNumber)
+        });
+        return result;
+    }
 
-  }
+    function filterByPosition(list, position) {
+        var positionInLowerCase = position.toLowerCase();
+        return list.filter(function (v) {
+            return (v.position.toLowerCase()).startsWith(positionInLowerCase)
+        });
+    }
 
-  function filterByName(name) {
-    var nameInLowerCase = name.toLowerCase();
-    return vacs.filter(function (v) {
-      return (v.name.toLowerCase()).startsWith(nameInLowerCase)
-    });
-  }
 
-  function filterByPhone(phoneNumber) {
-    var result = vacs.filter(function (v) {
-      return v.phone_number.includes(phoneNumber)
-    });
+    $(".table-filter").on("keyup", function (event) {
+        var result = vacs;
+        result = filterByLastName(result, $("#last-name-filter").val());
+        result = filterByName(result, $("#name-filter").val());
+        result = filterByPhone(result, $("#phone-filter").val());
+        result = filterByPosition(result, $("#position-filter").val());
 
-    return result;
-  }
-
-  function filterByPosition(position) {
-    var positionInLowerCase = position.toLowerCase();
-    return vacs.filter(function (v) {
-      return (v.position.toLowerCase()).startsWith(positionInLowerCase)
-    });
-  }
-
-  // listen keyup event on name input
-  $("#phone-filter").on("keyup", function (event) {
-    drawTable(filterByPhone($(this).val()));
-
-  });
-
-  $("#last-name-filter").on("keyup", function (event) {
-    drawTable(filterByLastName($(this).val()));
-
-  });
-  $("#name-filter").on("keyup", function (event) {
-    drawTable(filterByName($(this).val()));
-  });
-  $("#position-filter").on("keyup", function (event) {
-    drawTable(filterByPosition($(this).val()));
-  });
-
-  $(".search-input").on("keyup", function () {
-    var value = $(this).val().toLowerCase();
-    var showNoResultMessage = true;
-    $("#search-bar-filter tr").each(function () {
-      var isVacMatch = $(this).text().toLowerCase().indexOf(value) > -1;
-      $(this).toggle(isVacMatch);
-
-      if (isVacMatch) {
-        showNoResultMessage = false;
-      }
+        drawTable(result)
     });
 
-    $(".no-result").toggle(showNoResultMessage);
-  });
+    function getCountItemsPerPage () {
+        return parseInt($(".view-filter-selection option:selected").val());
+    }
 
+    function updatePagination () {
+
+        var itemsPerPage = getCountItemsPerPage()
+
+        $(".first-v").text(itemsPerPage*page+1);
+       if(vacs.length<(itemsPerPage * page + itemsPerPage)) {
+           $(".last-v").text(vacs.length);
+       } else {$(".last-v").text(itemsPerPage * page + itemsPerPage);
+}
+    }
+
+    $("#filter-candidates").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        var showNoResultMessage = true;
+        $("#search-bar-filter tr").each(function () {
+            var isVacMatch = $(this).text().toLowerCase().indexOf(value) > -1;
+            $(this).toggle(isVacMatch);
+            if (isVacMatch) {
+                showNoResultMessage = false;
+            }
+        });
+
+        $(".no-result").toggle(showNoResultMessage);
+    });
+
+    $("select.view-filter-selection").change(function(){
+        page = 0
+        var itemsPerPage = getCountItemsPerPage()
+        $(".last-v").text(itemsPerPage);
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
+    });
+
+    $(".page-switching-button-back").on("click", function () {
+        page = (page > 0)? page - 1: 0;
+
+        drawTable(getVacationsByPage(vacs, getCountItemsPerPage()));
+    });
+    $(".page-switching-button-forward").on("click", function () {
+        var itemsPerPage = getCountItemsPerPage()
+
+        page = (vacs.length < itemsPerPage * (page + 1))? 0: page + 1
+
+        drawTable(getVacationsByPage(vacs, itemsPerPage));
+    });
 });
-
 
 
