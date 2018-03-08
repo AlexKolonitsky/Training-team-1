@@ -6,7 +6,6 @@ html {
 
 .global-work-page-wrapper {
   overflow: auto;
-  height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -41,11 +40,23 @@ html {
   color: #909090;
 }
 
+.navigation-bar-section, .navigation-bar-section-selected {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
 .navigation-bar-section {
   padding: 25px 0 20px 30px;
 }
 
 .navigation-bar-section-selected {
+  background-color: #ddd;
+}
+
+.navigation-bar-section:hover, .navigation-bar-section-selected:hover {
+  text-decoration: none;
+  color: #000;
   background-color: #ddd;
 }
 
@@ -71,11 +82,11 @@ html {
   display: inline-block;
   border: none;
   background-color: #e9e9e9;
-  width: 400px;
   margin-left: 10px;
   padding-left: 2px;
   position: absolute;
   bottom: 4px;
+  width: 113px;
 }
 
 .notification-button {
@@ -96,6 +107,10 @@ html {
   margin: 30px 0 35px 40px;
   font-weight: normal;
   font-size: 1.3em;
+}
+
+.table-wrapper {
+  overflow-x: auto;
 }
 
 .information-table {
@@ -131,7 +146,6 @@ td {
   font-size: 0.8em;
   color: #848484;
   min-height: 35px;
-  min-width: 350px;
 }
 
 .view-filter-selection {
