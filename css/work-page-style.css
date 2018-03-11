@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 html {
   background-color: #e9e9e9;
 }
@@ -47,6 +46,7 @@ html {
 
 .navigation-bar-section-selected {
   background-color: #ddd;
+  padding: 25px 0 20px 30px;
 }
 
 .information-bar-search {
@@ -56,7 +56,7 @@ html {
 
 .search-icon, .notification-button, .logout-button {
   display: inline-block;
-  background: url(../img/work-page-sprite.png) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   background-size: cover;
   width: 21px;
   height: 21px;
@@ -159,16 +159,17 @@ td {
   padding-left: 30px;
 }
 .global-add-button {
-  position: fixed;
-  right: 5%;
-  bottom: 56px;
-  background-color: #ddd;
-  border: none;
-  border-radius: 50%;
-  padding: 7px 20px;
-  font-size: 30px;
-  color: #999;
-  outline: none;
-  box-shadow: 1px 3px 15px #848484;
-  cursor: pointer;
+    position: fixed;
+    right: 5%;
+    bottom: 56px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+    padding: 7px 20px;
+    font-size: 30px;
+    color: #999;
+    outline: none;
+    box-shadow: 1px 3px 15px #848484;
+    cursor: pointer;
 }
+
