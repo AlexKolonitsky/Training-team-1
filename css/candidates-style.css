@@ -67,7 +67,7 @@ html {
 
 .search-icon, .notification-button, .logout-button {
   display: inline-block;
-  background: url(../img/sprite.png) no-repeat;
+  background: url(../img/work-page-sprite.png) no-repeat;
   background-size: cover;
   width: 21px;
   height: 21px;
@@ -109,36 +109,26 @@ html {
   font-size: 1.3em;
 }
 
-.table-wrapper {
-  overflow-x: auto;
+.filter-section {
+  min-width: 215px;
+  min-height: 33px;
+  margin: 0 0 30px 40px;
 }
 
-.information-table {
-  width: 100%;
-  border-collapse: collapse;
+.filter-by {
+  padding-top: 9px;
 }
 
-.information-table-search input {
-  width: 120px;
+.filter-selection {
+  margin-left: 15px;
+  padding: 0 0 0 5px;
+  border: 2px solid #c3c3c3;
+  border-radius: 15px;
 }
 
 .no-result {
   padding-left: 40px;
-}
-
-th {
-  font-weight: normal;
-  font-size: 1.1em;
-  text-align: left;
-  border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
-  padding: 9px 0 9px 40px;
-  color: #999;
-}
-
-td {
-  padding: 30px 0 30px 40px;
-  border-bottom: 2px solid #eee;
+  display: none;
 }
 
 .view-filter-wrapper {
@@ -154,25 +144,86 @@ td {
   border: 0;
 }
 
+.candidates-wrapper {
+  margin: 0 40px 15px 35px;
+}
+
+.candidate-card {
+  display: block;
+  color: #000;
+  box-shadow: 0px 1px 1px #848484;
+  margin-bottom: 27px;
+  position: relative;
+  background-image: url("../img/noavatar.png");
+  background-size: cover;
+  width: 217px;
+  height: 270px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.candidate-card:hover {
+  box-shadow: 2px 2px 14px #848484;
+  transition: all ease-in-out .1s;
+  color: #000;
+}
+
+.candidate-status {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #f4f4f4;
+  font-size: 0.8em;
+  padding: 0 5px;
+}
+
+.candidate-card-info {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+.candidate-position {
+  margin: 0 0 0 20px;
+  color: #b4b4b4;
+  font-size: 0.8em;
+  padding-top: 10px;
+}
+
+.candidate-full-name {
+  margin: 0 0 0 20px;
+  font-weight: bold;
+}
+
+.candidate-salary {
+  margin: 0 0 0 20px;
+  font-size: 1.2em;
+}
+
+.candidate-update-date {
+  margin: 0 0 0 20px;
+  font-size: 0.75em;
+  color: #787878;
+  text-align: right;
+  padding-right: 18px;
+  padding-bottom: 10px;
+}
+
 .number-of-element-per-page {
   letter-spacing: 0;
+  margin-right: 30px;
 }
 
-.total-count {
-  margin-right: 20px;
-}
-
-.page-switching-button-back, .page-switching-button-forward {
+.page-switching-button {
   display: inline-block;
   text-decoration: none;
   font-size: 1.7em;
   font-weight: bold;
   margin-right: 30px;
   color: #848484;
-}
-
-.page-switching-button-left {
-  padding-left: 30px;
 }
 
 .global-add-button {
@@ -189,4 +240,3 @@ td {
   box-shadow: 1px 3px 15px #848484;
   cursor: pointer;
 }
-
