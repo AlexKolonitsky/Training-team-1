@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate's profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/candidate-profile-style.css" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+<div class="global-work-page-wrapper">
+  <div class="row no-gutters">
+    <div class="col-12 col-lg-2">
+      <div class="navigation-bar">
+        <div class="row no-gutters">
+          <div class="col">
+            <h1 class="navigation-bar-title">Hr app</h1>
+            <a href="#" class="navigation-bar-section">Interview</a>
+            <a href="vacancies.html" class="navigation-bar-section">Vacancies</a>
+            <a href="candidates.html" class="navigation-bar-section navigation-bar-section-selected">Candidates</a>
+            <a href="#" class="navigation-bar-section">Management</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-10">
+      <div class="information-bar">
+        <div class="information-bar-search">
+          <div class="row no-gutters">
+            <div class="col-10">
+              <div class="search-icon"></div>
+              <input class="search-input" type="text" placeholder="Search">
+            </div>
+            <div class="col-2">
+              <a href="#" class="notification-button"></a>
+              <a href="#" class="logout-button"></a>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Candidates</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Jimmy Carr</li>
+          </ol>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="row">
+                <div class="col-md-12 col-sm-6 col-12">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Accepted for interview
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">New</a>
+                      <a class="dropdown-item" href="#">CV-Rejected</a>
+                      <a class="dropdown-item" href="#">CV-Accepted</a>
+                    </div>
+                  </div>
+                  <div></div>
+                  <img src="img/candidate.png"/>
+                  <div data-edit class="position">
+                    <span>Java Developer</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                  <div data-edit class="name-of-candidate">
+                    <span>Jimmy Carr</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                  <div data-edit class="salary">
+                    <span>800$</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                  <div class="date-of-update">1 day later</div>
+                </div>
+                <div class="col-md-12 col-sm-6 col-12">
+                  <h3 class="header-contact-information">Contact information</h3>
+                  <div class="contact-inform">Telephone:</div>
+                  <div data-edit class="data-of-contact-information">
+                    <span>+44-7500-667-433</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                  <div class="contact-inform">E-mail:</div>
+                  <div data-edit class="data-of-contact-information">
+                    <span>jimmy-carr@contact.com</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                  <div class="contact-inform">Address:</div>
+                  <div data-edit class="data-of-contact-inform">
+                    <span>735 High Road, N12 OUS, UK</span>
+                    <input type="text" class="data-edit">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="exper-header">Experience</h3>
+                  <section>
+                    <article class="experience">
+                      <div class="experience__short-info">
+                        <span class="experience__date">
+                          <time datetime="2015-04">Apr 2015</time> - Now
+                        </span>
+                        <span class="experience__position">Learn Java Developer</span>
+                        <span class="experience__location">London, UK</span>
+                      </div>
+                      <div class="experience__descr">
+                        <a class="experience__company" href="itransition.com">Itransition Group Ltd.</a>
+                        <p class="experience__descr-text">
+                          WEB Development, work with server side logic, take part in search engine development and
+                          optimization, develop integration solution with JIRA.
+                          Technologies: Linux, JAvaSE/JavaEE, Tomcat, REST API, JavaScript, JQuery, CSS, Html, Git,
+                          Linux(CentOS)
+                        </p>
+                      </div>
+                    </article>
+                    <article class="experience">
+                      <div class="experience__short-info">
+                        <span class="experience__date">
+                          <time datetime="2012-10">Oct 2012</time> -
+                          <time datetime="2015-03">Mar 2015</time>
+                        </span>
+                        <span class="experience__position">Learn Java Developer</span>
+                        <span class="experience__location">London, UK</span>
+                      </div>
+                      <div class="experience__descr">
+                        <a class="experience__company" href="belhard.com">Belhard.</a>
+                        <p class="experience__descr-text">
+                          Design, build, and maintain efficient, reusable, and reliable Java code. Identify bottlenecks
+                          and bugs, and devise solutions to these problems.
+                        </p>
+                      </div>
+                    </article>
+                    <article class="experience">
+                      <div class="experience__short-info">
+                        <span class="experience__date">
+                          <span class="experience__date-text">Education</span>
+                          <time datetime="2007">2007</time> -
+                          <time datetime="2012">2012</time>
+                        </span>
+                        <span class="experience__position">Learn Java Developer</span>
+                        <span class="experience__location">London, UK</span>
+                      </div>
+                      <div class="experience__descr">
+                        <a class="experience__company" href="bntu.by">Belarusian National Technical University</a>
+                        <p class="experience__descr-text">
+                          Bachelor's Degree, Informatics and Radio Electronics, Programmer
+                        </p>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+                <div class="col-md-12">
+                  <div class="skills">Skills</div>
+                  <button type="button" class="btn btn-outline-secondary">JavaScript</button>
+                  <button type="button" class="btn btn-outline-secondary">Node.js</button>
+                  <button type="button" class="btn btn-outline-secondary">Java</button>
+                  <button type="button" class="btn btn-outline-secondary">Maven</button>
+                  <button type="button" class="btn btn-outline-secondary">JSF</button>
+                  <button type="button" class="btn btn-outline-secondary">JPA</button>
+                  <button type="button" class="btn btn-outline-secondary">Design Patterns</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="global-edit-button">
+          <div class="global-edit-button__img"></div>
+        </button>
+        <script src="js/candidate-profile.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

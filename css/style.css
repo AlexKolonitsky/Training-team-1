@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html {
   background-color: #e9e9e9;
 }
@@ -21,7 +23,7 @@ body {
   padding: 20px 20px 30px 20px;
   box-shadow: 4px 4px 7px #dbdbdb;
   color: #c8c7c6;
-  font-family: "Franklin Gothic Medium";
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
@@ -62,7 +64,7 @@ body {
 
 .user-avatar {
   display: block;
-  width: 140px;
+  width: 130px;
   height: 140px;
   border-radius: 50%;
 }
