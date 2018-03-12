@@ -1,0 +1,588 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 2,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Ivan Ivanov",
+      "salary": 700,
+      "update_date": 7
+    },
+    {
+      "id": 3,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Petr Petrov",
+      "salary": 500,
+      "update_date": 1
+    },
+    {
+      "id": 4,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Ken Block",
+      "salary": 300,
+      "update_date": 6
+    },
+    {
+      "id": 5,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 1800,
+      "update_date": 1
+    },
+    {
+      "id": 6,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "David Pow",
+      "salary": 800,
+      "update_date": 15
+    },
+    {
+      "id": 7,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 8,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 9,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 10,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 11,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 12,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 3
+    },
+    {
+      "id": 13,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 3
+    },
+    {
+      "id": 14,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 3
+    },
+    {
+      "id": 15,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 3
+    },
+    {
+      "id": 16,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 3
+    },
+    {
+      "id": 17,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 18,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 19,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 20,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 21,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 22,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 23,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 24,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 25,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 26,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 27,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 28,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 29,
+      "current_status": "CV-Accepted",
+      "position": "Web Backend Developer",
+      "full_name": "Emma Miller",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 30,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 31,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 32,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 33,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 34,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 35,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 36,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 37,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Max Moore",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 38,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 39,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 40,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 41,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 42,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 600,
+      "update_date": 1
+    },
+    {
+      "id": 43,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 44,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 45,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 46,
+      "current_status": "CV-Rejected",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 47,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": "4 days later"
+    },
+    {
+      "id": 48,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 49,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 50,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 51,
+      "current_status": "CV-Rejected",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 52,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 53,
+      "current_status": "New",
+      "position": "Web Backend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 54,
+      "current_status": "CV-Rejected",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 55,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 56,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 57,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 58,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 59,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 60,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 61,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 62,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 63,
+      "current_status": "CV-Rejected",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 64,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 65,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "James White",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 66,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 67,
+      "current_status": "Accepted for interview",
+      "position": "Web Frontend Developer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 68,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 69,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 70,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 71,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 72,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    },
+    {
+      "id": 73,
+      "current_status": "Accepted for interview",
+      "position": "UX Designer",
+      "full_name": "Jacob Davis",
+      "salary": 800,
+      "update_date": 1
+    }
+  ]
+}

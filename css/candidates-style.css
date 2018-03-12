@@ -67,7 +67,7 @@ html {
 
 .search-icon, .notification-button, .logout-button {
   display: inline-block;
-  background: url(../img/work-page-sprite.png) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   background-size: cover;
   width: 21px;
   height: 21px;
@@ -214,10 +214,14 @@ html {
 
 .number-of-element-per-page {
   letter-spacing: 0;
-  margin-right: 30px;
+  margin-right: 2px;
 }
 
-.page-switching-button {
+.total-count {
+  margin-right: 20px;
+}
+
+.page-switching-button-back, .page-switching-button-forward {
   display: inline-block;
   text-decoration: none;
   font-size: 1.7em;

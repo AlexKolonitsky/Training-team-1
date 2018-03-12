@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Work page</title>
+  <title>Candidates</title>
   <link rel="stylesheet" href="css/candidates-style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -30,7 +30,7 @@
           <div class="row no-gutters">
             <div class="col-10">
               <div class="search-icon"></div>
-              <input class="search-input" type="text" placeholder="Search">
+              <input class="search-input" type="text" placeholder="Search" id="filter-candidates">
             </div>
             <div class="col-2">
               <a href="#" class="notification-button"></a>
@@ -55,112 +55,31 @@
           </div>
         </div>
         <div class="candidates-wrapper">
-          <div class="row no-gutters">
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-              <a href="#" class="candidate-card">
-                <div class="candidate-status">New</div>
-                <div class="candidate-card-info">
-                  <p class="candidate-position">Java Developer</p>
-                  <p class="candidate-full-name">Thirumani Vel</p>
-                  <p class="candidate-salary">800$</p>
-                  <p class="candidate-update-date">1 day later</p>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div class="row no-gutters"></div>
         </div>
         <div class="view-filter-wrapper">
           <span class="rows-per-page">Rows per page</span>
           <select class="view-filter-selection">
-            <option class="view-filter-selection-option">10</option>
-            <option class="view-filter-selection-option">20</option>
-            <option class="view-filter-selection-option">50</option>
+            <option class="view-filter-selection-option" selected="selected" value="10">10</option>
+            <option class="view-filter-selection-option" value="20">20</option>
+            <option class="view-filter-selection-option" value="50">50</option>
           </select>
-          <span class="number-of-element-per-page">1-10 of 100</span>
-          <a class="page-switching-button" href="#"><</a>
-          <a class="page-switching-button" href="#">></a>
+          <span class="number-of-element-per-page">
+            <span class="first-v">1</span> - <span class="last-v"></span>
+          </span>
+          <span class="total-count"></span>
+          <a class="page-switching-button-back" href="#"><</a>
+          <a class="page-switching-button-forward" href="#">></a>
         </div>
         <button class="global-add-button">+</button>
       </div>
     </div>
   </div>
 </div>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="js/candidates.js"></script>
 </body>
 </html>

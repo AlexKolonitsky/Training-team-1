@@ -11,7 +11,7 @@ $(document).ready(function () {
     drawTable(getVacationsByPage(vacs, itemsPerPage));
 
   }).catch(function (error) {
-    console.log(error)
+    console.log(error);
   });
 
   function drawTable(vacancies) {
@@ -29,30 +29,30 @@ $(document).ready(function () {
       $tableBody.append($row);
     });
 
-    updatePagination()
+    updatePagination();
   }
 
   function getVacationsByPage(vacs, count) {
-    return vacs.slice(count * page, count * page + count)
+    return vacs.slice(count * page, count * page + count);
   }
 
   function filterByLastName(list, lastName) {
     var lastNameInLowerCase = lastName.toLowerCase();
     return list.filter(function (v) {
-      return (v.last_name.toLowerCase()).startsWith(lastNameInLowerCase)
+      return (v.last_name.toLowerCase()).startsWith(lastNameInLowerCase);
     });
   }
 
   function filterByName(list, name) {
     var nameInLowerCase = name.toLowerCase();
     return list.filter(function (v) {
-      return (v.name.toLowerCase()).startsWith(nameInLowerCase)
+      return (v.name.toLowerCase()).startsWith(nameInLowerCase);
     });
   }
 
   function filterByPhone(list, phoneNumber) {
     var result = list.filter(function (v) {
-      return v.phone_number.includes(phoneNumber)
+      return v.phone_number.includes(phoneNumber);
     });
     return result;
   }
@@ -60,7 +60,7 @@ $(document).ready(function () {
   function filterByPosition(list, position) {
     var positionInLowerCase = position.toLowerCase();
     return list.filter(function (v) {
-      return (v.position.toLowerCase()).startsWith(positionInLowerCase)
+      return (v.position.toLowerCase()).startsWith(positionInLowerCase);
     });
   }
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
     result = filterByPhone(result, $("#phone-filter").val());
     result = filterByPosition(result, $("#position-filter").val());
 
-    drawTable(result)
+    drawTable(result);
   });
 
   function getCountItemsPerPage() {
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
   function updatePagination() {
 
-    var itemsPerPage = getCountItemsPerPage()
+    var itemsPerPage = getCountItemsPerPage();
 
     $(".first-v").text(itemsPerPage * page + 1);
     if (vacs.length < (itemsPerPage * page + itemsPerPage)) {
@@ -106,8 +106,8 @@ $(document).ready(function () {
   });
 
   $("select.view-filter-selection").change(function () {
-    page = 0
-    var itemsPerPage = getCountItemsPerPage()
+    page = 0;
+    var itemsPerPage = getCountItemsPerPage();
     $(".last-v").text(itemsPerPage);
     drawTable(getVacationsByPage(vacs, itemsPerPage));
   });
@@ -118,9 +118,9 @@ $(document).ready(function () {
     drawTable(getVacationsByPage(vacs, getCountItemsPerPage()));
   });
   $(".page-switching-button-forward").on("click", function () {
-    var itemsPerPage = getCountItemsPerPage()
+    var itemsPerPage = getCountItemsPerPage();
 
-    page = (vacs.length < itemsPerPage * (page + 1)) ? 0 : page + 1
+    page = (vacs.length < itemsPerPage * (page + 1)) ? 0 : page + 1;
 
     drawTable(getVacationsByPage(vacs, itemsPerPage));
   });
