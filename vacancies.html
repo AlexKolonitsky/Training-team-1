@@ -1,98 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Work page</title>
-    <link rel="stylesheet" href="css/work-page-style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Work page</title>
+  <link rel="stylesheet" href="css/vacancies-style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
 <div class="global-work-page-wrapper">
-    <div class="row no-gutters">
-        <div class="col-12 col-lg-2">
-            <div class="navigation-bar">
-                <div class="row no-gutters">
-                    <div class="col">
-                        <h1 class="navigation-bar-title">Hr app</h1>
-                        <div class="navigation-bar-section">Interview</div>
-                        <div class="navigation-bar-section navigation-bar-section-selected">Vacancies</div>
-                        <div class="navigation-bar-section">Candidates</div>
-                        <div class="navigation-bar-section">Management</div>
-                    </div>
-                </div>
-            </div>
+  <div class="row no-gutters">
+    <div class="col-12 col-lg-2">
+      <div class="navigation-bar">
+        <div class="row no-gutters">
+          <div class="col">
+            <h1 class="navigation-bar-title">Hr app</h1>
+            <div class="navigation-bar-section">Interview</div>
+            <div class="navigation-bar-section navigation-bar-section-selected">Vacancies</div>
+            <div class="navigation-bar-section">Candidates</div>
+            <div class="navigation-bar-section">Management</div>
+          </div>
         </div>
-        <div class="col-12 col-lg-10">
-            <div class="information-bar">
-                <div class="information-bar-search">
-                    <div class="row no-gutters">
-                        <div class="col-10">
-                            <div class="search-icon"></div>
-                            <input class="search-input" type="text" placeholder="Search for vacancies, candidates" id="filter-candidates">
-                        </div>
-                        <div class="col-2">
-                            <a href="#" class="notification-button"></a>
-                            <a href="#" class="logout-button"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col-12">
-                        <h2 class="information-bar-title">Vacancies</h2>
-                        <table class="information-table">
-                            <thead id="information-thead">
-                            <tr class="information-table-header">
-                                <th>First name</th>
-                                <th>Last name</th>
-                                <th>Phone number</th>
-                                <th>Position</th>
-                            </tr>
-                            <tr class="information-table-search">
-                                <th>
-                                    <input type="text" id="name-filter" class="table-filter">
-                                </th>
-                                <th>
-                                    <input type="text" id="last-name-filter" class="table-filter">
-                                </th>
-                                <th>
-                                    <input type="text" id="phone-filter" class="table-filter">
-                                </th>
-                                <th>
-                                    <input type="text" id="position-filter" class="table-filter">
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody id="search-bar-filter">
-                            </tbody>
-                        </table>
-                        <div class="no-result">No Result Found</div>
-                    </div>
-                </div>
-                <div class="view-filter-wrapper">
-                    <span class="rows-per-page">Rows per page</span>
-                    <select class="view-filter-selection">
-                        <option class="view-filter-selection-option" selected="selected" value="10">10</option>
-                        <option class="view-filter-selection-option" value="20">20</option>
-                        <option class="view-filter-selection-option" value="50">50</option>
-                    </select>
-                    <span class="number-of-element-per-page">
+      </div>
+    </div>
+    <div class="col-12 col-lg-10">
+      <div class="information-bar">
+        <div class="information-bar-search">
+          <div class="row no-gutters">
+            <div class="col-10">
+              <div class="search-icon"></div>
+              <input class="search-input" type="text" placeholder="Search for vacancies, candidates"
+                     id="filter-candidates">
+            </div>
+            <div class="col-2">
+              <a href="#" class="notification-button"></a>
+              <a href="#" class="logout-button"></a>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12">
+            <h2 class="information-bar-title">Vacancies</h2>
+            <table class="information-table">
+              <thead id="information-thead">
+              <tr class="information-table-header">
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone number</th>
+                <th>Position</th>
+              </tr>
+              <tr class="information-table-search">
+                <th>
+                  <input type="text" id="name-filter" class="table-filter">
+                </th>
+                <th>
+                  <input type="text" id="last-name-filter" class="table-filter">
+                </th>
+                <th>
+                  <input type="text" id="phone-filter" class="table-filter">
+                </th>
+                <th>
+                  <input type="text" id="position-filter" class="table-filter">
+                </th>
+              </tr>
+              </thead>
+              <tbody id="search-bar-filter">
+              </tbody>
+            </table>
+            <div class="no-result">No Result Found</div>
+          </div>
+        </div>
+        <div class="view-filter-wrapper">
+          <span class="rows-per-page">Rows per page</span>
+          <select class="view-filter-selection">
+            <option class="view-filter-selection-option" selected="selected" value="10">10</option>
+            <option class="view-filter-selection-option" value="20">20</option>
+            <option class="view-filter-selection-option" value="50">50</option>
+          </select>
+          <span class="number-of-element-per-page">
               <span class="first-v">1</span> - <span class="last-v"></span>
                     </span>
-                    <span class="total-count"></span>
-                    <a class="page-switching-button-back" href="#"><</a>
-                    <a class="page-switching-button-forward" href="#">></a>
-                </div>
-                <button class="global-add-button">+</button>
-            </div>
+          <span class="total-count"></span>
+          <a class="page-switching-button-back" href="#"><</a>
+          <a class="page-switching-button-forward" href="#">></a>
         </div>
+        <button class="global-add-button">+</button>
+      </div>
     </div>
+  </div>
 </div>
 <script
-        src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script src="js/vacancies.js"></script>
 </body>
 </html>
