@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Work page</title>
+  <title>Vacancies</title>
   <link rel="stylesheet" href="css/vacancies-style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,7 +29,7 @@
           <div class="row no-gutters">
             <div class="col-10">
               <div class="search-icon"></div>
-              <input class="search-input" type="text" placeholder="Search for vacancies, candidates"
+              <input class="search-input" type="text" placeholder="Search"
                      id="filter-candidates">
             </div>
             <div class="col-2">
@@ -41,32 +41,34 @@
         <div class="row no-gutters">
           <div class="col-12">
             <h2 class="information-bar-title">Vacancies</h2>
-            <table class="information-table">
-              <thead id="information-thead">
-              <tr class="information-table-header">
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Phone number</th>
-                <th>Position</th>
-              </tr>
-              <tr class="information-table-search">
-                <th>
-                  <input type="text" id="name-filter" class="table-filter">
-                </th>
-                <th>
-                  <input type="text" id="last-name-filter" class="table-filter">
-                </th>
-                <th>
-                  <input type="text" id="phone-filter" class="table-filter">
-                </th>
-                <th>
-                  <input type="text" id="position-filter" class="table-filter">
-                </th>
-              </tr>
-              </thead>
-              <tbody id="search-bar-filter">
-              </tbody>
-            </table>
+            <div class="information-table-wrapper">
+              <table class="information-table">
+                <thead id="information-thead">
+                <tr class="information-table-header">
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Phone number</th>
+                  <th>Position</th>
+                </tr>
+                <tr class="information-table-search">
+                  <th>
+                    <input type="text" id="name-filter" class="table-filter">
+                  </th>
+                  <th>
+                    <input type="text" id="last-name-filter" class="table-filter">
+                  </th>
+                  <th>
+                    <input type="text" id="phone-filter" class="table-filter">
+                  </th>
+                  <th>
+                    <input type="text" id="position-filter" class="table-filter">
+                  </th>
+                </tr>
+                </thead>
+                <tbody id="search-bar-filter">
+                </tbody>
+              </table>
+            </div>
             <div class="no-result">No Result Found</div>
           </div>
         </div>
@@ -78,8 +80,8 @@
             <option class="view-filter-selection-option" value="50">50</option>
           </select>
           <span class="number-of-element-per-page">
-              <span class="first-v">1</span> - <span class="last-v"></span>
-                    </span>
+            <span class="first-v">1</span> - <span class="last-v"></span>
+          </span>
           <span class="total-count"></span>
           <a class="page-switching-button-back" href="#"><</a>
           <a class="page-switching-button-forward" href="#">></a>
